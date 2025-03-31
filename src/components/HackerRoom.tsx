@@ -4,6 +4,8 @@ import { Mesh } from 'three';
 
 function HackerRoom(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/hacker-room.glb');
+
+  // Modify these later
   const monitortxt = useTexture('textures/desk/monitor.png');
   const screenTxt = useTexture('textures/desk/screen.png');
 

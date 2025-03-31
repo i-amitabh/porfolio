@@ -7,6 +7,9 @@ import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constant";
 import { Vector3 } from "three";
 import Target from "./Target";
+import ReactLogo from "./ReactLogo";
+import Cube from "./Cube";
+import HeroCamera from "./HeroCamera";
 
 const Hero = () => {
     const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -24,9 +27,14 @@ const Hero = () => {
             <Canvas className="w-full h-full">
                 <Suspense fallback={<CanvasLoader />}>
                     <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-                    <HackerRoom position={sizes.deskPosition as unknown as Vector3} rotation={[0, -Math.PI, 0]} scale={sizes.deskScale} />
+                    <HeroCamera isMobile={isMobile}>
+                        <HackerRoom position={sizes.deskPosition as unknown as Vector3} rotation={[0, -Math.PI, 0]} scale={sizes.deskScale} />
+                    </HeroCamera>
                     <group>
                         <Target position={sizes.targetPosition as unknown as Vector3} />
+                        <ReactLogo position={sizes.reactLogoPosition as unknown as Vector3} />
+                        <Cube position={sizes.cubePosition as unknown as Vector3} />
+                        {/* <Rings position={sizes.ringPosition as unknown as Vector3} /> */}
                     </group>
                     <ambientLight intensity={1} />
                     <directionalLight position={[10, 10, 10]} intensity={isMobile ? 0.07 : 0.1} />
