@@ -10,6 +10,7 @@ import Target from "./Target";
 import ReactLogo from "./ReactLogo";
 import Cube from "./Cube";
 import HeroCamera from "./HeroCamera";
+import Button from "./Button";
 
 const Hero = () => {
     const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -40,6 +41,12 @@ const Hero = () => {
                     <directionalLight position={[10, 10, 10]} intensity={isMobile ? 0.07 : 0.1} />
                 </Suspense>
             </Canvas>
+        </div>
+
+        <div className="absolute bottom-7 left-0 right-0 w-full z-10 sm:px-10 px-5">
+            <a href="#contact" className="w-fit">
+                <Button name="Let's work together" isBeam containerClass='sm:w-fit w-full sm:min-w-9'></Button>
+            </a>
         </div>
     </section>
   )
