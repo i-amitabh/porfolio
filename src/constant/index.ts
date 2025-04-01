@@ -55,6 +55,12 @@ export const clientReviews = [
         'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
     },
 ];
+
+export type TagType = {
+    id: number;
+    name: string;
+    path: string;
+}
   
 export const myProjects = [
     {
