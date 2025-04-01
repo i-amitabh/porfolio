@@ -1,3 +1,4 @@
+import About from "./components/About";
 import Hero from "./components/Hero";
 import Navbar from "./components/navbar";
 
@@ -6,6 +7,7 @@ const App = () => {
     <main className="max-w-7xl mx-auto">
       <Navbar />
       <Hero />
+      <About />
     </main>
   )
 }
