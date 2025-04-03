@@ -17,7 +17,6 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  // service_dz13s7d
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
