@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Clients from "./components/Clients";
+import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Navbar from "./components/navbar";
 import Projects from "./components/Projects";
@@ -12,6 +13,7 @@ const App = () => {
       <About />
       <Projects />
       <Clients />
+      <Contact />
     </main>
   )
 }
